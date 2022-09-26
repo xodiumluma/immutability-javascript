@@ -1,0 +1,67 @@
+{
+  "name": "immutable",
+  "version": "4.1.0",
+  "description": "Immutable Data Collections",
+  "license": "MIT",
+  "homepage": "https://immutable-js.com",
+  "author": {
+    "name": "Lee Byron",
+    "url": "https://github.com/leebyron"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/immutable-js/immutable-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/immutable-js/immutable-js/issues"
+  },
+  "main": "dist/immutable.js",
+  "module": "dist/immutable.es.js",
+  "sideEffects": false,
+  "types": "dist/immutable.d.ts",
+  "files":[
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "immutable",
+    "persistent",
+    "lazy",
+    "data",
+    "datastructure",
+    "functional",
+    "collection",
+    "stateless",
+    "sequence",
+    "iteration"
+  ],
+  "publishKeys": [
+    "name",
+    "version",
+    "description",
+    "license",
+    "homepage",
+    "author",
+    "repository",
+    "bugs",
+    "main",
+    "module",
+    "sideEffects",
+    "types",
+    "files",
+    "keywords"
+  ],
+  "engines": {
+    "npm": ">=7.0.0"
+  },
+  "scripts": {
+    "test": "run-s format lint type-check build unit-test",
+    "format": "npm run lint:format -- --write",
+    "lint": "run-s lint:*",
+    "lint:format": "prettier --check \"{__tests__,src,type-definitions,website/src,perf,resources}/**/*{.js,.ts,.tsx,.flow,.css}\"",
+    "lint:js": "eslint \"{__tests__,src,website/src}/**/*.js\"",
+    "lint:ts": "tslint --project type-definitions/tsconfig.json \"{__tests__,src,type-definitions,website/src}/**/*.{ts,tsx}\"",
+    "type-check": "run-s type-check:*"
+  }
+}
