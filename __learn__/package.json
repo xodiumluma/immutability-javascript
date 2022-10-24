@@ -73,5 +73,8 @@
     "build:prepare": "./resources/prepare-dist.sh",
     "build:stats": "node ./resources/dist-stats.js",
     "unit-test": "jest",
+    "website:build": "cd website && next build && next-sitemap && next export",
+    "website:dev": "cd website && next dev",
+    "check-git-clean": "./resources/check-git-clean.sh",
   }
 }
