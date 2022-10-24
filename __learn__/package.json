@@ -76,5 +76,7 @@
     "website:build": "cd website && next build && next-sitemap && next export",
     "website:dev": "cd website && next dev",
     "check-git-clean": "./resources/check-git-clean.sh",
+    "benchmark": "node ./resources/benchmark.js",
+    "publish": "echo 'ONLY PUBLISH VIA CI'; exit 1;"
   }
 }
