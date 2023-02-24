@@ -176,6 +176,9 @@ import { Map, List } from 'immutable';
 
   // $ExpectError
   Map<number, number>().update(1, 10, (v: number | undefined) => v + 'a');
+
+  // $ExpectType Map<string, string>
+  Map<string, string>().update("noKey", ls => ls?.toUpperCase());
 }
 
 {
@@ -487,4 +490,11 @@ import { Map, List } from 'immutable';
 
   // $ExpectType Map<number, number>
   Map<number, number>().asImmutable();
+}
+
+{
+  // #toJS
+
+  // $ExpectType { [x: string]: number; [x: number]: number; [x: symbol]: number; }
+  Map<number, number>().toJS();
 }
